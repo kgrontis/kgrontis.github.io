@@ -4,7 +4,6 @@ date: 2023-02-28 15:33:12 +0300
 categories: [CSHARP, DOTNET]
 tags: [csharp, efcore, performance]     # TAG names should always be lowercase
 ---
-# Data Loading in Entity Framework
 
 Data retrieval is an important aspect of designing efficient applications in software development. It is common for applications to require data from a database in order to function. Data access is a critical performance factor that must be carefully considered in this regard. The three common methods of loading data from a database are lazy, eager, and explicit loading. In this article, we will look at the differences between these methods, as well as their benefits and drawbacks. We'll also look at how to use Entity Framework in C# to implement them.
 
