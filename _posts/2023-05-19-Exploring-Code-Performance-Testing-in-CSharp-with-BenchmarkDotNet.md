@@ -2,6 +2,9 @@
 layout: post
 title: Exploring Code Performance Testing in C# with BenchmarkDotNet
 date: 2023-05-19 13:25 +0300
+image:
+  path: /assets/img/logoBenchmark.png
+  alt: benchmark logo
 categories: [csharp]
 tags: [dotnet, performance, tests] 
 ---
