@@ -127,7 +127,7 @@ Finally we add a call to `MapIdentityApi` to add endpoints for actions like regi
 app.MapIdentityApi<AppUser>();
 ```
 
-You can read more about this method [here](https://github.com/dotnet/aspnetcore/blob/main/src/Identity/Core/src/IdentityApiEndpointRouteBuilderExtensions.cs).
+You can read more about the endpoints that are being created by using this method, and what happens in each endpoint [here](https://github.com/dotnet/aspnetcore/blob/main/src/Identity/Core/src/IdentityApiEndpointRouteBuilderExtensions.cs).
 
 Last but not least we have to run the migrations to our database.
 ```powershell
