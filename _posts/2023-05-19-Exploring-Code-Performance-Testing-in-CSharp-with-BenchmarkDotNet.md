@@ -209,7 +209,7 @@ Baselines help us understand how well our code performs by giving us a starting 
         int counter = 0;
         while (counter < arr.Length)
         {
-            sum = arr[counter];
+            sum += arr[counter];
             counter++;
         }
         return sum;
