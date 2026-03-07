@@ -2,6 +2,9 @@
 layout: post
 title: "Hello World, Meet Pebbles"
 date: 2026-03-05 12:00 +0000
+image:
+  path: /assets/img/pebbles.jpg
+  alt: pebbles
 categories: [ai, dotnet]
 tags: [ai, dotnet, terminal, spectre-console]
 ---
