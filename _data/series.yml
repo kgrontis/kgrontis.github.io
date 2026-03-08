@@ -1,0 +1,9 @@
+# Series definitions
+# Each series has:
+#   - name: The display name of the series
+#   - description: A brief description of what the series covers
+#   - id: A unique identifier used in post front matter
+
+- name: Building Pebbles
+  description: A journey into building a terminal-based AI coding assistant with .NET and Spectre.Console
+  id: pebbles

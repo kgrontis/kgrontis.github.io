@@ -1,0 +1,137 @@
+---
+layout: default
+panel_includes:
+  - toc
+tail_includes:
+  - series-nav
+  - related-posts
+  - post-nav
+script_includes:
+  - comment
+---
+
+{% include lang.html %}
+{% include toc-status.html %}
+
+<h1 data-toc-skip>{{ page.title }}</h1>
+
+{% if page.description %}
+  <div class="post-description">
+    <p>{{ page.description }}</p>
+  </div>
+{% endif %}
+
+<div class="post-meta">
+  <span class="time">
+    {{ site.data.locales[lang].post.posted }}
+    {% include datetime.html date=page.date tooltip=true lang=lang %}
+  </span>
+  {% if page.last_modified_at and page.last_modified_at != page.date %}
+    <span class="time">
+      {{ site.data.locales[lang].post.updated }}
+      {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+    </span>
+  {% endif %}
+</div>
+
+{% if page.image %}
+  {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
+  {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
+  {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
+  {% if page.image.lqip %}
+    {%- capture lqip -%}lqip="{{ page.image.lqip }}"{%- endcapture -%}
+  {% endif %}
+
+  <div class="post-preview">
+    <img {{ src }} {{ class }} {{ alt }} {{ lqip }}>
+    {%- if page.image.alt -%}
+      <figcaption class="text-center">
+        {{ page.image.alt }}
+      </figcaption>
+    {%- endif -%}
+  </div>
+{% endif %}
+
+<div class="post-meta">
+  {% if page.author %}
+    {% assign authors = page.author %}
+  {% elsif page.authors %}
+    {% assign authors = page.authors %}
+  {% endif %}
+
+  <span>
+    {{ site.data.locales[lang].post.written_by }}
+    {% if authors %}
+      {% for author in authors %}
+        {% if site.data.authors[author].url -%}
+          <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+        {%- else -%}
+          {{ site.data.authors[author].name }}
+        {%- endif %}
+        {% unless forloop.last %}{{ ', ' }}{% endunless %}
+      {% endfor %}
+    {% else %}
+      {{ site.social.name }}
+    {% endif %}
+  </span>
+
+  {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
+    <span class="pageviews">
+      {{ site.data.locales[lang].post.pageview_measure }}
+    </span>
+  {% endif %}
+
+  {% include read-time.html content=content prompt=true lang=lang %}
+</div>
+
+{% if enable_toc %}
+  <div id="toc-wrapper" class="d-flex justify-content-between">
+    <h2 class="panel-heading ps-3 mb-2">{{ page.title }}</h2>
+    <button class="toc-trigger btn btn-sm me-3" data-bs-toggle="collapse" data-bs-target="#toc" aria-expanded="true">
+      <i class="fa-solid fa-bars"></i>
+      <span class="toc-label">{{- site.data.locales[lang].panel.toc -}}</span>
+    </button>
+  </div>
+  <nav id="toc" class="collapse show">
+    <h2 data-toc-skip class="panel-heading ps-3 my-2">{{- page.title -}}</h2>
+    {% include toc.html html=content sanitize=true %}
+  </nav>
+{% endif %}
+
+<div class="content">
+  {{ content }}
+</div>
+
+<div class="post-tail-wrapper text-muted">
+  {% if page.categories.size > 0 %}
+    <div class="post-tail mb-3">
+      {% for category in page.categories %}
+        <a href="{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/">{{ category }}</a>
+        {%- unless forloop.last -%},{%- endunless -%}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if page.tags.size > 0 %}
+    <div class="post-tail mb-3">
+      {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/" class="post-tag no-text-decoration">
+          {{- tag -}}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if site.data.locales[lang].copyright.license.template %}
+    <div class="post-tail mb-3">
+      {% capture _replacement %}
+        <a href="{{ site.data.locales[lang].copyright.license.link }}">
+          {{ site.data.locales[lang].copyright.license.name }}
+        </a>
+      {% endcapture %}
+      {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
+    </div>
+  {% endif %}
+
+  {% include post-sharing.html lang=lang %}
+</div>

@@ -7,6 +7,9 @@ image:
   alt: pebbles
 categories: [ai, dotnet]
 tags: [ai, dotnet, terminal, spectre-console]
+series:
+  id: pebbles
+  index: 1
 ---
 
 AI is everywhere, and I'm overwhelmed by how little I understand and how fast things are moving. So I thought it's time to build something, not to catch up, but to finally get it.
