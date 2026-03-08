@@ -7,9 +7,6 @@ image:
   alt: pebbles
 categories: [ai, dotnet]
 tags: [ai, dotnet, terminal, pebbles]
-series:
-  id: pebbles
-  index: 2
 ---
 
 I connected Pebbles to a real AI. It felt nice.
