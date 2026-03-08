@@ -2,12 +2,11 @@
 layout: post
 title: "From Chatting to Reading: Teaching Pebbles to See My Code"
 date: 2026-03-07 12:00 +0000
+image:
+  path: /assets/img/pebbleWater.jpg
+  alt: pebbles
 categories: [ai, dotnet]
 tags: [ai, dotnet, terminal, pebbles]
----
-
-*March 5-7, 2026*
-
 ---
 
 I connected Pebbles to a real AI. It felt nice.
