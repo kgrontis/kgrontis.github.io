@@ -5,9 +5,11 @@ date: 2026-03-05 12:00 +0000
 image:
   path: /assets/img/pebbles.jpg
   alt: pebbles
-categories: [ai, dotnet]
-tags: [ai, dotnet, terminal, spectre-console]
+categories: [ai, dotnet, pebbles-cli]
+tags: [ai, dotnet, terminal, spectre-console, pebbles]
 ---
+
+[Part 2: From Chatting to Reading: Teaching Pebbles to See My Code](/posts/from-chatting-to-reading-teaching-pebbles-to-see-my-code/)
 
 AI is everywhere, and I'm overwhelmed by how little I understand and how fast things are moving. So I thought it's time to build something, not to catch up, but to finally get it.
 

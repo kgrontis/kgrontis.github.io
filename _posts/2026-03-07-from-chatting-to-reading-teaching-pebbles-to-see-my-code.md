@@ -5,9 +5,11 @@ date: 2026-03-07 12:00 +0000
 image:
   path: /assets/img/pebbleWater.jpg
   alt: pebbles
-categories: [ai, dotnet]
+categories: [ai, dotnet, pebbles-cli]
 tags: [ai, dotnet, terminal, pebbles]
 ---
+
+[Part 1: Hello World, Meet Pebbles](/posts/hello-world-meet-pebbles/)
 
 I connected Pebbles to a real AI. It felt nice.
 
