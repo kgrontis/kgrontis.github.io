@@ -9,7 +9,8 @@ categories: [ai, dotnet, pebbles-cli]
 tags: [ai, dotnet, terminal, spectre-console, pebbles]
 ---
 
-[Part 2: From Chatting to Reading: Teaching Pebbles to See My Code](/posts/from-chatting-to-reading-teaching-pebbles-to-see-my-code/)
+[Part 2: From Chatting to Reading: Teaching Pebbles to See My Code](/posts/from-chatting-to-reading-teaching-pebbles-to-see-my-code/) <br>
+[Part 3: Building Pebbles: A Journey in AI Tooling](/posts/building-pebbles-a-journey-in-ai-tooling/)
 
 AI is everywhere, and I'm overwhelmed by how little I understand and how fast things are moving. So I thought it's time to build something, not to catch up, but to finally get it.
 

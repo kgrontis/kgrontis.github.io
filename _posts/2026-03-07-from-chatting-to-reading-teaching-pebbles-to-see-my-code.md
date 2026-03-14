@@ -9,7 +9,8 @@ categories: [ai, dotnet, pebbles-cli]
 tags: [ai, dotnet, terminal, pebbles]
 ---
 
-[Part 1: Hello World, Meet Pebbles](/posts/hello-world-meet-pebbles/)
+[Part 1: Hello World, Meet Pebbles](/posts/hello-world-meet-pebbles/)<br>
+[Part 3: Building Pebbles: A Journey in AI Tooling](/posts/building-pebbles-a-journey-in-ai-tooling/)
 
 I connected Pebbles to a real AI. It felt nice.
 
